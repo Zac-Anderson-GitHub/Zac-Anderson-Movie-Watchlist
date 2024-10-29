@@ -1,0 +1,260 @@
+:root {
+  background-color: #121212;;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+
+header {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 208px;
+  background-image: url('/splash-img.png');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.h1-button-container {
+  width: calc(100% - 90px);
+  max-width: 550px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h1-button-container h1 {
+  display: flex;
+  font-size: 42.79px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.h1-button-container button {
+  background: none;
+  border-style: none;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -19px;
+  width: calc(100% - 90px);
+}
+
+
+.search-icon {
+  pointer-events: none; /* Prevents icon from blocking clicks */
+}
+
+.search-bar input {
+  display: flex;
+  height: 38px;
+  padding: 8px;
+  padding-left: 45px; /* Space for the icon */
+  justify-content: center;
+  width: 100%;
+  max-width: 550px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0; 
+  border-bottom-right-radius: 0;
+  background-color: #2E2E2F;
+  color: #A5A5A5;
+  font-size: 14px;
+  font-weight: 500;
+  background-image: url('/search-icon.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 15px center; /* Adjust position as needed */
+}
+
+.search-bar button {
+  color: #FFFFFF;
+  background-color: #4B4B4B;
+  width: 120px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+  border-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+
+}
+
+/* Visual feedback on hover and active states */
+.h1-button-container button:hover,
+.search-bar button:hover, 
+.watchlist-btn:hover {
+  background-color: #5A5A5A;
+  cursor: pointer;
+}
+
+
+
+.h1-button-container button:active,
+.search-bar button:active,
+.watchlist-btn:active {
+  background-color: #3A3A3A; /* Darkens color on click */
+  transform: scale(0.95); /* Gives a slight 'pressed' effect */
+}
+
+/* Accessibility focus outline */
+.h1-button-container button:focus,
+.search-bar button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+main {
+  padding: 50px 30px;
+}
+
+/* Container for movie results */
+#results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: calc(100vh - 208px); /* Limits results height to avoid overflowing */
+  padding: 20px; /* Optional padding for better spacing */
+  width: 100%;
+}
+
+/* Main styling to contain explore icon */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #787878;
+
+}
+
+.main-container img {
+  max-height: 100%; /* Ensures it scales without limiting vertical alignment */
+}
+
+
+.movie-card {
+  display: flex;
+  padding: 10px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-bottom: 1.5px solid #2E2E2F;
+  max-width: 900px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.poster-img {
+  height: 120px;
+  margin-right: 15px;
+}
+
+.movie-info {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.title-section h3 {
+  margin: 0;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.title-section img {
+  width: 12px;
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 250px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1px;
+}
+
+.rating {
+  padding-top: 1px;
+  margin-left: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.details-section {
+  display: flex;
+  width: auto;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 5px;
+  margin: 15px 0;
+}
+
+.runtime {
+  margin-right: 20px;
+}
+
+.genre {
+  padding-right: 20px;
+}
+
+.watchlist-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.watchlist-btn img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.overview {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
